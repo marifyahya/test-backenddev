@@ -1,0 +1,49 @@
+{
+    "name": "laravel/lumen",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^7.3|^8.0",
+        "darkaonline/swagger-lume": "8.*",
+        "illuminate/redis": "8.*",
+        "jenssegers/mongodb": "^3.8",
+        "kreait/laravel-firebase": "^4.1",
+        "laravel/lumen-framework": "^8.3.1",
+        "mailgun/mailgun-php": "^3.5",
+        "nyholm/psr7": "^1.5",
+        "rbdwllr/reallysimplejwt": "^4.0",
+        "sentry/sentry-laravel": "^2.11",
+        "symfony/http-client": "^6.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.3.1",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}
